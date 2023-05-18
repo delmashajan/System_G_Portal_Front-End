@@ -1,0 +1,237 @@
+<app-navbar></app-navbar>
+
+  
+  
+
+
+<div class="container text-center">
+
+    
+
+
+
+   <div class="col col-xxl-4">
+    
+    <div class="row">
+    
+     <div class="container">
+    
+     <div class="row mt-4">
+    
+     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+    
+     <div class="filter">
+    
+    <div class="row">
+    
+    <div class="col">
+    
+    Filter
+    
+     </div>
+    
+    <div class="col">
+    
+   All type
+    
+    </div>
+    
+    <div class="col">
+    
+    Status
+    
+     </div>
+    
+    <div class="col">
+    
+     Last 5 Days
+    
+     </div>
+    
+    </div>
+    
+   </div>
+    
+    
+    
+    <div class="card text-center" *ngFor="let i of surgeries" style="width: 28rem; height: 14.5rem;">
+    
+    <div class="card-body" style="width: 28rem; height: 5rem;">
+    
+     <div>
+
+          <button type="button" class="btn align-left b1" style="width: 175px;">Ticket Id:{{i.ticket_id}}</button>
+
+    
+     <!-- <button type="button" class="btn align-left b1 " >Ticket Id:{{i.ticket_id}}</button> -->
+    
+     <button type="button" class="btn btn-outline-primary align-left b2" >Order</button>
+    
+     </div>
+     
+    
+    <div [ngClass]="{High:surgeries.priority=='high',high:surgeries.priority=='very-High',Normal:surgeries.priority=='Normal'}"> </div>
+    
+    
+    
+     <select formControlName="website" class="btn dropdown-toggle align-right"> 
+    
+     <option selected style="background-color: rgb(187, 187, 187);">{{i.priority}}</option> 
+    
+     <option value="high">High</option> 
+    
+    <option value="very-high">Very-High</option>
+    
+     <option value="normal">Normal</option> 
+    
+     </select>
+    
+    </div>
+    
+    
+    
+    
+    
+     <div class="card-body">
+    
+     <h5 class="card-title align-left">{{i.surgery_name}}</h5>
+    
+    <br> 
+    
+     <br> 
+    
+     <img class="align-left t1" src="assets/images/clock-history.svg" height="20px" width="20px" alt="">
+    
+     <h6 class="align-left t2 text-secondary">{{i.time}} {{i.date}}</h6>
+     </div>
+    
+     <div class="card-body text-body-secondary">
+    
+     <img class="align-left t1" src="assets/images/drill.png" height="20px" width="20px" alt="">
+    
+     <h6 class="align-left t2 text-secondary" >{{i.order_item_count}}</h6>
+    
+    <!-- <img class="align-right t1" src="assets/images/person-add.svg" height="25px" width="25px" alt=""> -->
+
+    
+
+
+    <div class="dropdown">
+
+         <button class="btn btn-light dropdown-toggle align-right" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+        
+         <img src="assets/images/person-add.svg" alt="Icon" class="icon-image">
+        
+         </button>
+        
+         <ul class="dropdown-menu">
+        
+         <li><a class="dropdown-item" href="#">Gokul</a></li>
+        
+         <li><a class="dropdown-item" href="#">Athulya</a></li>
+        
+         <li><a class="dropdown-item" href="#">Delma</a></li>
+        
+         </ul>
+        
+        </div>
+      
+      
+    
+   <h6 class="align-right t2 text-secondary" >
+    
+    <!-- <select formControlName="website" class="btn dropdown-toggle align-right"> 
+    
+    <option selected style="background-color: rgb(187, 187, 187);" >Accepted</option> 
+
+    <option (click)="updateStatusClick(i.id,'Accepted')">Accepted</option>
+    
+    <option  (click)="updateStatusClick(i.id,'Pending')">Pending</option>
+    
+    
+    <option  (click)="updateStatusClick(i.id,'Rejected')">Rejected</option>
+
+    
+    </select>  -->
+
+
+     <div class="dropdown">
+
+     <button class="btn btn-light dropdown-toggle align-right"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+     
+      
+          
+     </button>
+
+
+     
+      <ul class="dropdown-menu">
+
+           
+     
+      <li><a class="dropdown-item" href="#" (click)="updateStatusClick(i.id,'Accepted')">Accepted</a></li>
+     
+      <li><a class="dropdown-item" href="#" (click)="updateStatusClick(i.id,'Rejected')">Rejected</a></li>
+     
+      <li><a class="dropdown-item" href="#" (click)="updateStatusClick(i.id,'Pending')">Pending</a></li>
+     
+      
+     
+     </ul>
+     
+      </div> 
+
+
+
+
+      
+        
+
+    
+    <img class="align-right t1" src="assets/images/activity.svg" height="35px" width="25px" alt="">
+    
+    </h6>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+     </div>
+    
+     </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     </div>
+    
+    </div>
+    
+    </div>
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+
