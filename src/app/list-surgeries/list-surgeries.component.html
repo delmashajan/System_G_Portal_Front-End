@@ -1,237 +1,316 @@
 <app-navbar></app-navbar>
 
-  
-  
+<div class="container " style="margin-left: 48px; font-family: 'Poppins';">
+
+  <div class="col col-xxl-4 align-left">
+
+    <div class="row align-left">
+
+      <div class="container">
+
+        <div class="row mt-0">
+
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div>
+
+              <img src="assets/images/list.svg" alt="" height="20px" width="20px" alt=""
+                style="margin-top: 2px 2px padding-top=20px">
 
 
-<div class="container text-center">
 
-    
+              <b>Alerts</b>
 
+            </div>
 
+            <div class="flex" style="margin-top: 10px;">
 
-   <div class="col col-xxl-4">
-    
-    <div class="row">
-    
-     <div class="container">
-    
-     <div class="row mt-4">
-    
-     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-    
-     <div class="filter">
-    
-    <div class="row">
-    
-    <div class="col">
-    
-    Filter
-    
-     </div>
-    
-    <div class="col">
-    
-   All type
-    
-    </div>
-    
-    <div class="col">
-    
-    Status
-    
-     </div>
-    
-    <div class="col">
-    
-     Last 5 Days
-    
-     </div>
-    
-    </div>
-    
-   </div>
-    
-    
-    
-    <div class="card text-center" *ngFor="let i of surgeries" style="width: 28rem; height: 14.5rem;">
-    
-    <div class="card-body" style="width: 28rem; height: 5rem;">
-    
-     <div>
+              <input type="text" placeholder="Search..." class="form-control" style="margin-left: 8px;">
 
-          <button type="button" class="btn align-left b1" style="width: 175px;">Ticket Id:{{i.ticket_id}}</button>
+              <img src="assets/images/search.svg"
+                style="margin-left: -30px; cursor: pointer;margin-top: 10px; height: 17px;"
+                class="fa fa-lock form-control-feedback">
 
-    
-     <!-- <button type="button" class="btn align-left b1 " >Ticket Id:{{i.ticket_id}}</button> -->
-    
-     <button type="button" class="btn btn-outline-primary align-left b2" >Order</button>
-    
-     </div>
-     
-    
-    <div [ngClass]="{High:surgeries.priority=='high',high:surgeries.priority=='very-High',Normal:surgeries.priority=='Normal'}"> </div>
-    
-    
-    
-     <select formControlName="website" class="btn dropdown-toggle align-right"> 
-    
-     <option selected style="background-color: rgb(187, 187, 187);">{{i.priority}}</option> 
-    
-     <option value="high">High</option> 
-    
-    <option value="very-high">Very-High</option>
-    
-     <option value="normal">Normal</option> 
-    
-     </select>
-    
-    </div>
-    
-    
-    
-    
-    
-     <div class="card-body">
-    
-     <h5 class="card-title align-left">{{i.surgery_name}}</h5>
-    
-    <br> 
-    
-     <br> 
-    
-     <img class="align-left t1" src="assets/images/clock-history.svg" height="20px" width="20px" alt="">
-    
-     <h6 class="align-left t2 text-secondary">{{i.time}} {{i.date}}</h6>
-     </div>
-    
-     <div class="card-body text-body-secondary">
-    
-     <img class="align-left t1" src="assets/images/drill.png" height="20px" width="20px" alt="">
-    
-     <h6 class="align-left t2 text-secondary" >{{i.order_item_count}}</h6>
-    
-    <!-- <img class="align-right t1" src="assets/images/person-add.svg" height="25px" width="25px" alt=""> -->
+              <button type="button" class="btn btn-warning searchbtn" style="margin-left: 25px;"><i
+                  class="fa fa-filter fa-flip-horizontal" style="color: #ffffff;"></i></button>
 
-    
+            </div>
+
+            <div class="search-bar align-center">
+
+            </div>
+
+            <div class="filter">
+
+              <div class="row">
+
+                <div class="col position-relative mt-1"
+                  style="color:rgb(225, 166, 26) ; font-size: small; margin-left: 10;">All Request
 
 
-    <div class="dropdown">
 
-         <button class="btn btn-light dropdown-toggle align-right" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-        
-         <img src="assets/images/person-add.svg" alt="Icon" class="icon-image">
-        
-         </button>
-        
-         <ul class="dropdown-menu">
-        
-         <li><a class="dropdown-item" href="#">Gokul</a></li>
-        
-         <li><a class="dropdown-item" href="#">Athulya</a></li>
-        
-         <li><a class="dropdown-item" href="#">Delma</a></li>
-        
-         </ul>
-        
+                  <span class="position-absolute translate-middle badge rounded-pill bg-primary"
+                    style="margin-left: 18px; margin-top: 10px;">
+
+                    15
+
+                  </span>
+
+                </div>
+
+                <hr class="hrline">
+
+                <div class="col mt-1" style="margin-right: 100px; margin-left: 30px; font-size: small;">Demo Request
+
+                  <span class="position-absolute translate-middle badge rounded-pill bg-primary"
+                    style="margin-left: 18px; margin-top: 10px;">
+
+                    9
+
+                  </span></div>
+
+              </div>
+
+            </div>
+
+            <div class="filter">
+
+              <div class="row">
+
+                <div class="col"
+                  style="margin-left: 5px;margin-top: 5px; font-size:medium;font-weight: bold; margin-bottom: 15px;">
+                  Filter</div>
+
+                <div class="col">
+
+                  <select aria-placeholder="Select" style="font-size: small;" class="btn btn-sm dropdown-toggle">
+
+
+                    <option disabled="disabled" selected="selected" style="display:none;">All Type</option>
+
+                    <option value="high">Order</option>
+
+                    <option value="very-high">Return</option>
+
+                  </select>
+
+
+                </div>
+
+                <div class="col" *ngFor="let j of surgeries">
+
+
+                  <div class="dropdown">
+
+                    <button class="btn btn-light dropdown-toggle align-right" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+
+                      {{ selectedOption || 'Select option' }}
+
+                    </button>
+
+                    <ul class="dropdown-menu">
+
+
+
+                      <li><a class="dropdown-item" (click)="dateFilterClick('Nov 01,2022')">Nov 01,2022</a></li>
+
+                      <li><a class="dropdown-item" (click)="dateFilterClick('Oct 23,2022')">Oct 23,2022</a></li>
+
+                      <li><a class="dropdown-item" (click)="dateFilterClick('Oct 25,2022')">Oct 25,2022</a></li>
+
+                    </ul>
+
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="card" *ngFor="let i of surgeries" style="width: 28rem;">
+
+              <div class="card-body">
+
+                <div class="align-left">
+
+                  <button type="button " class="btn btn-sm b1 ">Ticket Id:{{i.ticket_id}}</button>
+
+                  <button type="button" class="btn btn-sm btn-outline-primary b2">Order</button>
+
+                </div>
+
+                <div class="dropdown">
+
+                  <button class="btn btn-light dropdown-toggle align-right" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+
+                    <span class="priority-icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                        [attr.fill]="priorityColor[i.priority]" class="bi bi-square-fill" viewBox="0 0 16 16">
+
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+
+                      </svg></span>
+
+                    {{ i.priority || 'Select option' }}
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item">Very High</a></li>
+                    <li><a class="dropdown-item">High</a></li>
+                    <li><a class="dropdown-item">Normal</a></li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <div class="card-body" style="padding-top: 0;">
+
+                <div class="row">
+
+                  <div class="col">
+
+                    <h6 class="card-title">{{i.surgery_name}}</h6>
+
+                    <img class="align-left t1" src="assets/images/clock-history.svg" alt="">
+
+                    <h6 class="align-left t2 text-secondary">{{i.time}} {{i.date}}</h6>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="card-body" style="padding-top: 0; padding-bottom: 0;">
+
+                <img class="align-left" src="assets/images/drill.png" height="15px" width="15px" alt="">
+
+                <h6 class="align-left text-secondary t3">{{i.order_item_count}} </h6>
+
+                <div class="dropdown">
+
+                  <button class="btn btn-light dropdown-toggle align-right" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+
+                    <img src="assets/images/person-add.svg" alt="Icon" class="icon-image">
+
+                  </button>
+
+                  <ul class="dropdown-menu">
+
+                    <li><a class="dropdown-item" href="#">Athulya</a>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Delma</a>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Gokul</a>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Robin Xavier</a></li>
+
+                    <li><a class="dropdown-item" href="#">Alexander Jacob</a></li>
+
+                    <li><a class="dropdown-item" href="#">James Varghese</a></li>
+
+
+                  </ul>
+
+                </div>
+
+                <div class="dropdown">
+
+                  <button class="btn btn-light dropdown-toggle align-right" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+
+                    {{ i.status || 'Select option' }}
+
+                  </button>
+
+                  <ul class="dropdown-menu">
+
+                    <li><a class="dropdown-item" (click)="updateStatusClick(i.id,'Accepted')">Accepted</a></li>
+
+                    <li><a class="dropdown-item" (click)="updateStatusClick(i.id,'Rejected')">Rejected</a></li>
+
+                    <li><a class="dropdown-item" (click)="updateStatusClick(i.id,'Pending')">Pending</a></li>
+
+                  </ul>
+
+                </div>
+
+                <img class="align-right t2" src="assets/images/activity.svg" height="15px" width="15px" alt="">
+
+              </div>
+
+            </div>
+
+          </div>
         </div>
-      
-      
-    
-   <h6 class="align-right t2 text-secondary" >
-    
-    <!-- <select formControlName="website" class="btn dropdown-toggle align-right"> 
-    
-    <option selected style="background-color: rgb(187, 187, 187);" >Accepted</option> 
 
-    <option (click)="updateStatusClick(i.id,'Accepted')">Accepted</option>
-    
-    <option  (click)="updateStatusClick(i.id,'Pending')">Pending</option>
-    
-    
-    <option  (click)="updateStatusClick(i.id,'Rejected')">Rejected</option>
+      </div>
 
-    
-    </select>  -->
-
-
-     <div class="dropdown">
-
-     <button class="btn btn-light dropdown-toggle align-right"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-     
-      
-          
-     </button>
-
-
-     
-      <ul class="dropdown-menu">
-
-           
-     
-      <li><a class="dropdown-item" href="#" (click)="updateStatusClick(i.id,'Accepted')">Accepted</a></li>
-     
-      <li><a class="dropdown-item" href="#" (click)="updateStatusClick(i.id,'Rejected')">Rejected</a></li>
-     
-      <li><a class="dropdown-item" href="#" (click)="updateStatusClick(i.id,'Pending')">Pending</a></li>
-     
-      
-     
-     </ul>
-     
-      </div> 
-
-
-
-
-      
-        
-
-    
-    <img class="align-right t1" src="assets/images/activity.svg" height="35px" width="25px" alt="">
-    
-    </h6>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-    
-     </div>
-    
-     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-     </div>
-    
-    </div>
-    
     </div>
 
 
+  </div>
+
+
+  <!-- Second Task -->
+  <div class="container" style="margin-left: 48px; font-family: 'Poppins';">
+    <div class="col col-xxl-8 align-right margin-left:20px">
+      <div class="row">
+        <div class="container">
+          <h1 style="margin-left: 13px; margin-top: 27px;" >Dashboard</h1>
+          <div class="row mt-0 pt-2" style="margin-left: 8px;">
+            <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+              <div class="card mt-2" style="height: 10rem; width: 40rem;" *ngFor="let k of filterDate; let i = index">
+                <div class="align-left">
+                  <button type="button" class="btn btn-sm b1" style="margin-left: 10px; margin-top: 10px;">Ticket
+                    Id:{{k.ticket_id}}</button>
+                  <button *ngIf="i >= 3" type="button" class="btn btn-sm btn-primary b2" data-bs-toggle="modal"
+                    data-bs-target="#rescheduleModal" (click)="reschedule(k.ticket_id)">Reschedule</button>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h6 class="card-title" style="margin-left: 10px; margin-top: 10px;">{{k.surgery_name}}</h6>
+                    <img class="align-left t1" style="margin-left: 10px; " src="assets/images/clock-history.svg" alt="">
+                    <h6 class="align-left t2 text-secondary">{{k.time}} {{k.date}}</h6>
+                  </div>
+                </div>
+                <img class="align-left" style="margin-left: 10px; margin-top: 10px;" src="assets/images/drill.png"
+                  height="15px" width="15px" alt="">
+                <h6 class="align-left text-secondary t3" style="margin-left: 30px; margin-top: -15px;">
+                  {{k.order_item_count}} </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pop Up  -->
+  <div class="modal fade" id="rescheduleModal" tabindex="-1" aria-labelledby="rescheduleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="rescheduleModalLabel">Reschedule Surgery</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This surgery is rescheduled after 2 days .</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-    
-    
-    
-    
-    
-    
-    
 
+
+
+</div>

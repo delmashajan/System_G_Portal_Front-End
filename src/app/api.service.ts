@@ -16,4 +16,11 @@ export class ApiService {
     return this.http.put("http://localhost:8081/updateticketstatus",dataToSend)
   }
 
+  dateFilter=(date:any)=>{
+    return this.http.get("http://localhost:8081/dateFiler/"+date)
+  }
+
+  rescheduleAdd=(data:any)=>{
+    return this.http.post("http://localhost:8081/addMessage",data);
+  }
 }
